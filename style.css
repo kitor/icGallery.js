@@ -1,0 +1,158 @@
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  /* http://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting-using-css */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.site-container{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#image-gui{
+  z-index: 1;
+  display: none;
+}
+
+.div-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#loader{
+  background: url("loader.svg") center no-repeat;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+#img-container{
+  background-color: #000;
+  text-align: center;
+}
+
+#va-fix,
+#image{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#va-fix{
+  width: 0px;
+  height: 100%;
+}
+
+#image{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.buttons{
+    z-index: 2;
+}
+
+#previous,
+#middle,
+#next{
+  display: inline-block;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  color: rgba(255,255,255,0.4);
+  line-height: 100vh;
+  font-size: 5em;
+  transition: background-color 0.2s, color 0.2s, text-shadow 0.2s;
+}
+
+#previous,
+#next{
+  cursor: pointer;
+}
+
+#next{
+  text-align: right;
+}
+
+#previous:hover,
+#next:hover{
+  background-color: rgba(40,40,40,0.1);
+  text-shadow: 0.5pt 0.5pt 5pt #333;
+  color: #FFF;
+}
+
+#middle{
+  width: 50%;
+  text-align: center;
+}
+
+#button-thumbs-container{
+  height: 20%;
+  font-size: 5em;
+  text-align: center;
+  z-index: 3;
+}
+
+a#button-thumbs{
+  height: 100%;
+  display: block;
+  line-height: 1em;
+  padding-top: 0.1em;
+  text-decoration: none;
+  color: rgba(255,255,255,0.4);
+  transition: background-color 0.2s, color 0.2s, text-shadow 0.2s;
+}
+
+a#button-thumbs:hover{
+  text-decoration: none;
+  background-color: rgba(40,40,40,0.1);
+  text-shadow: 0.5pt 0.5pt 5pt #333;
+  color: #FFF;
+}
+
+a#button-thumbs:active,
+a#button-thumbs:visited{
+  color: #FFF;
+}
+
+/* thumbnails gui */
+
+#thumbnails-container{
+  height: 100%;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+a.thumb{
+  display: inline-block;
+  width: 450px;
+  max-width: 40%;
+  height: 300px;
+
+  margin: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+a.thumb:hover{
+  opacity: 1;
+}
