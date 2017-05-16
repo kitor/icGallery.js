@@ -1,3 +1,5 @@
-photo/!.place-images-here
-thumb/!.place-thumbs-here
+photo/*
+!photo/.place-images-here
+thumb/*
+!thumb/.place-thumbs-here
 data.json
